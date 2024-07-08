@@ -1,0 +1,5 @@
+https://api.edamam.com/search?q="pizza"&app_id=6527f158&app_key=13b5918fd05c276154d8246fa27f5dbc
+
+email = namansahu191102@gmail.com
+password = 7071904018
+
