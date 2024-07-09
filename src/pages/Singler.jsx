@@ -13,18 +13,21 @@ const Singler = () => {
             <h4>MealType : {location.state.recipe.mealType}</h4>
             <div className='d-flex justify-content-center mt-3'><Link to={location.state.recipe.url} className='btn btn-primary'>How to make</Link></div>
             <div className='d-flex'>
-              <div className='bg-warming'><p>{location.state.recipe.totalNutrients.FAT.label}</p>
+              <div className='bg-warming'>
+              <p>{location.state.recipe.totalNutrients.FAT.label}</p>
               <p>{Math.ceil(location.state.recipe.totalNutrients.FAT.quantity)} g</p></div>
             </div>
-            <div className='bg-warming'><p>{location.state.recipe.totalNutrients.CA.label}</p>
-            <p>{Math.ceil(location.state.recipe.totalNutrients.CA.quantity)} Mg</p></div>
-            </div>
             <div className='bg-warming'>
+            <p>{location.state.recipe.totalNutrients.CA.label}</p>
+            <p>{Math.ceil(location.state.recipe.totalNutrients.CA.quantity)} Mg</p>
+            </div>
+            
+                <div className='bg-warming'>
               <p>{location.state.recipe.totalNutrients.FAT.label}</p>
-              <p>{Math.ceil(location.state.recipe.totalNutrients.PROCNT.quantity)} g</p></div>
+              <p>{Math.ceil(location.state.recipe.totalNutrients.PROCNT.quantity)} g</p>
+                </div>
             </div>
-            </div>
-        </div>
+          </div>
         <div className='row'>
           <div className='col-md-6  d-flex align-items-center flex-column'>
           <h1>Health Labels</h1>
