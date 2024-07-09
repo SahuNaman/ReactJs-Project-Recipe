@@ -12,19 +12,20 @@ const Singler = () => {
             <div className='col-md-6 '><h3>Title : {location.state.recipe.label}</h3>
             <h4>MealType : {location.state.recipe.mealType}</h4>
             <div className='d-flex justify-content-center mt-3'><Link to={location.state.recipe.url} className='btn btn-primary'>How to make</Link></div>
-            <div className='d-flex'>
-              <div className='bg-warming'>
+            <div className=' row  gap-5 mt-2 d-flex  align-items-center'>
+              <div className=' col-3 bg-warning m-0 p-0 d-flex flex-column justify-content-center'>
               <p>{location.state.recipe.totalNutrients.FAT.label}</p>
               <p>{Math.ceil(location.state.recipe.totalNutrients.FAT.quantity)} g</p></div>
-            </div>
-            <div className='bg-warming'>
+            
+            <div className=' col-3 bg-warning'>
             <p>{location.state.recipe.totalNutrients.CA.label}</p>
-            <p>{Math.ceil(location.state.recipe.totalNutrients.CA.quantity)} Mg</p>
+            <p>{Math.ceil(location.state.recipe.totalNutrients.CA.quantity)} mg</p>
             </div>
             
-                <div className='bg-warming'>
-              <p>{location.state.recipe.totalNutrients.FAT.label}</p>
+                <div className=' col-3 bg-warning'>
+              <p>{location.state.recipe.totalNutrients.PROCNT.label}</p>
               <p>{Math.ceil(location.state.recipe.totalNutrients.PROCNT.quantity)} g</p>
+                </div>
                 </div>
             </div>
           </div>
