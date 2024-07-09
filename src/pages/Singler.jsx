@@ -12,10 +12,21 @@ const Singler = () => {
             <div className='col-md-6 '><h3>Title : {location.state.recipe.label}</h3>
             <h4>MealType : {location.state.recipe.mealType}</h4>
             <div className='d-flex justify-content-center mt-3'><Link to={location.state.recipe.url} className='btn btn-primary'>How to make</Link></div>
+            <div className='d-flex'>
+              <div className='bg-warming'><p>{location.state.recipe.totalNutrients.FAT.label}</p>
+              <p>{Math.ceil(location.state.recipe.totalNutrients.FAT.quantity)} g</p></div>
+            </div>
+            <div className='bg-warming'><p>{location.state.recipe.totalNutrients.CA.label}</p>
+            <p>{Math.ceil(location.state.recipe.totalNutrients.CA.quantity)} Mg</p></div>
+            </div>
+            <div className='bg-warming'>
+              <p>{location.state.recipe.totalNutrients.FAT.label}</p>
+              <p>{Math.ceil(location.state.recipe.totalNutrients.PROCNT.quantity)} g</p></div>
+            </div>
             </div>
         </div>
         <div className='row'>
-          <div className='col-md-6 bg-info d-flex align-items-center flex-column'>
+          <div className='col-md-6  d-flex align-items-center flex-column'>
           <h1>Health Labels</h1>
             <ul>
               {location.state.recipe.healthLabels.map((obj)=>{
@@ -25,7 +36,7 @@ const Singler = () => {
             </ul>
           </div>
 
-          <div className='col-md-6 bg-info d-flex align-items-center flex-column'>
+          <div className='col-md-6  d-flex align-items-center flex-column'>
           <h1>Ingredients</h1>
             <ul>
               {location.state.recipe.ingredients.map((obj)=>{
