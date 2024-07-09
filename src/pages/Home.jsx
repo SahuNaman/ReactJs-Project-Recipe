@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
    
-  const handlesubmit=(obj)=>{
-   
-      console.log(obj)
-    
-  }
+  
   let searchValue = useRef()
   const [search,setSearch] =useState("pizza")
 
@@ -51,7 +47,7 @@ const Home = () => {
     <h5 className="card-title">{obj.recipe.label}</h5>
     
     <Link  state={obj} to="/single"  className="btn btn-primary">View Recipe </Link>
-    <button onClick={()=>handlesubmit(obj)}>Click me</button>
+    
   </div>
 </div>
        })}
